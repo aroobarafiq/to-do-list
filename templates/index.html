@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<form action="/add" method="POST" class="mb-3">
+    <input type="text" name="title" placeholder="Enter task" class="form-control" required>
+    <button type="submit" class="btn btn-primary mt-2">Add Task</button>
+</form>
+
+<ul class="list-group">
+    {% for task in tasks %}
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+        <span>
+            {{ task.title }}
+            {% if task.completed %}<span class="badge bg-success">Done</span>{% endif %}
+        </span>
+        <span>
+            <a href="/edit/{{ task.id }}" class="btn btn-warning btn-sm">Edit</a>
+            <a href="/complete/{{ task.id }}" class="btn btn-success btn-sm">Complete</a>
+            <a href="/delete/{{ task.id }}" class="btn btn-danger btn-sm">Delete</a>
+        </span>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

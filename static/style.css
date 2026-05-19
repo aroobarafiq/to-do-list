@@ -1,0 +1,26 @@
+body {
+    background-color: #e3410f; /* halka grey background */
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #0d6efd; /* Bootstrap blue */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.list-group-item {
+    font-size: 18px;
+}
+
+.list-group-item span {
+    font-weight: 500;
+}
+
+.btn {
+    margin-left: 5px;
+}
